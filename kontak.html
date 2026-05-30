@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | MLC UNIMUS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="kontak">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>Hubungi Kami</h1>
+        <p>Hubungi MLC UNIMUS untuk informasi layanan, program, dan kerja sama institusi.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <p><strong>Alamat:</strong><br>Universitas Muhammadiyah Semarang, Semarang, Jawa Tengah</p>
+            <p><strong>Email:</strong><br><a href="mailto:mlc@unimus.ac.id">mlc@unimus.ac.id</a></p>
+            <p><strong>WhatsApp:</strong><br><a href="https://wa.me/62895326363536" target="_blank" rel="noopener">+62 895-3263-63536</a></p>
+            <p><strong>Instagram:</strong><br>@mlcunimus</p>
+            <p><strong>Jam Layanan:</strong><br>Senin – Jumat, 08.00 – 16.00 WIB</p>
+          </div>
+
+          <div class="contact-form">
+            <h3>Formulir Pesan</h3>
+            <form onsubmit="sendMessage(event)">
+              <input type="text" id="nama" placeholder="Nama Lengkap" required />
+              <input type="email" id="email" placeholder="Email" required />
+              <select id="layananDipilih" required>
+                <option value="">Pilih Layanan</option>
+                <option>Proficiency Test of English Language (PTEL)</option>
+                <option>English Proficiency Course (EPC)</option>
+                <option>Academic English Training</option>
+                <option>Translation Service</option>
+                <option>Interpreter Service</option>
+                <option>Kerja Sama Institusi</option>
+                <option>Informasi Umum</option>
+              </select>
+              <textarea id="pesan" placeholder="Tulis pesan Anda" required></textarea>
+              <button class="submit-btn" type="submit">Kirim via WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
