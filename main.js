@@ -70,7 +70,7 @@ function renderSiteHeader() {
     '      </a>' +
     '    </div>' +
 
-    '    <button class="menu-toggle mobile-menu-btn" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>' +
+    '    <button class="menu-toggle mobile-menu-btn" type="button" onclick="toggleMenu(event)" aria-label="Menu">☰</button>' +
 
     '    <nav class="main-nav">' +
     '      <ul id="navMenu">' +
@@ -191,13 +191,16 @@ function initNavigation() {
 
 function createBeritaCard(berita) {
   return (
-    '<article class="news-card" data-kategori="' + berita.kategori + '">' +
+    '<article class="news-card news-card-modern" data-kategori="' + berita.kategori + '">' +
     '  <div class="news-thumb" style="background-image:url(\'' + berita.gambar + '\')"></div>' +
     '  <div class="news-body">' +
-    '    <p class="news-meta">' + formatTanggal(berita.tanggal) + ' · ' + berita.kategori + '</p>' +
+    '    <div class="news-top-meta">' +
+    '      <span class="badge news-badge">' + berita.kategori + '</span>' +
+    '      <span class="news-date">' + formatTanggal(berita.tanggal) + '</span>' +
+    '    </div>' +
     '    <h3>' + berita.judul + '</h3>' +
     '    <p>' + berita.ringkasan + '</p>' +
-    '    <a href="detail-berita.html?id=' + berita.id + '" class="read-more btn-read">Baca Selengkapnya →</a>' +
+    '    <a href="detail-berita.html?id=' + berita.id + '" class="read-more btn-read">Baca selengkapnya →</a>' +
     '  </div>' +
     '</article>'
   );
@@ -217,7 +220,7 @@ function renderHomePengumuman() {
   el.innerHTML = MLC_DATA.pengumuman.slice(0, 3).map(function (p) {
     const t = formatTanggalPengumuman(p.tanggal);
     return (
-      '<article class="announcement-item announcement-compact">' +
+      '<article class="announcement-item announcement-compact announcement-modern">' +
       '  <div class="announcement-date"><strong>' + t.hari + '</strong><span>' + t.bulan + '</span></div>' +
       '  <div>' +
       (p.penting ? '<span class="badge badge-urgent">Penting</span>' : '<span class="badge">' + p.kategori + '</span>') +
