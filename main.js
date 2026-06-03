@@ -1,16 +1,35 @@
-function toggleMenu() {
+function closeAllMenus() {
   const navMenu = document.getElementById('navMenu');
-  if (navMenu) navMenu.classList.toggle('show');
+  if (navMenu) navMenu.classList.remove('show');
+  document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
+    d.classList.remove('open');
+  });
+}
+
+function toggleMenu(event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const navMenu = document.getElementById('navMenu');
+  if (!navMenu) return;
+  const willOpen = !navMenu.classList.contains('show');
+  closeAllMenus();
+  if (willOpen) navMenu.classList.add('show');
 }
 
 function toggleDropdown(event, btn) {
-  if (event) event.preventDefault();
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
   const dropdown = btn.closest('.nav-dropdown');
   if (!dropdown) return;
+  const willOpen = !dropdown.classList.contains('open');
   document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
-    if (d !== dropdown) d.classList.remove('open');
+    d.classList.remove('open');
   });
-  dropdown.classList.toggle('open');
+  if (willOpen) dropdown.classList.add('open');
 }
 
 function formatTanggal(dateStr) {
@@ -42,7 +61,9 @@ function renderSiteHeader() {
     '  <div class="container header-inner">' +
 
     '    <div class="header-brand-group">' +
-    '      <img src="images/unimuss.png" alt="Logo Universitas Muhammadiyah Semarang" class="logo-unimus-wide">' +
+    '      <a href="https://unimus.ac.id/" target="_blank" rel="noopener" class="brand-logo-link unimus-link" aria-label="Website Universitas Muhammadiyah Semarang">' +
+    '        <img src="images/unimuss.png" alt="Logo Universitas Muhammadiyah Semarang" class="logo-unimus-wide">' +
+    '      </a>' +
     '      <div class="brand-divider"></div>' +
     '      <a href="index.html" class="brand-logo-link" aria-label="Beranda MLC UNIMUS">' +
     '        <img src="images/logo_mlc_transparan.png" alt="Logo Muhammadiyah Language Center" class="logo-mlc">' +
@@ -59,8 +80,9 @@ function renderSiteHeader() {
     '          <button type="button" onclick="toggleDropdown(event, this)">Profil ▾</button>' +
     '          <ul>' +
     '            <li><a href="profil.html#tentang" data-nav="profil">Tentang MLC</a></li>' +
-    '            <li><a href="profil.html#visi-misi" data-nav="profil">Visi Misi MLC UNIMUS</a></li>' +
-    '            <li><a href="profil.html#tujuan" data-nav="profil">Tujuan MLC UNIMUS</a></li>' +
+    '            <li><a href="profil.html#visi-misi" data-nav="profil">Visi &amp; Misi</a></li>' +
+    '            <li><a href="profil.html#tujuan" data-nav="profil">Tujuan</a></li>' +
+    '            <li><a href="profil.html#struktur" data-nav="profil">Struktur Organisasi</a></li>' +
     '          </ul>' +
     '        </li>' +
 
@@ -143,13 +165,18 @@ function initNavigation() {
   const navMenu = document.getElementById('navMenu');
   if (!navMenu) return;
 
-  navMenu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navMenu.classList.remove('show');
-      document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
-        d.classList.remove('open');
-      });
+  if (!window._mlcNavBound) {
+    window._mlcNavBound = true;
+    document.addEventListener('click', function (e) {
+      const header = document.querySelector('.site-header');
+      if (header && !header.contains(e.target)) {
+        closeAllMenus();
+      }
     });
+  }
+
+  navMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeAllMenus);
   });
 
   const currentPage = document.body.dataset.page;
