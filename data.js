@@ -1,6 +1,20 @@
 const MLC_DATA = {
   berita: [
     {
+      id: 'volunteer-mexico-english-communication',
+      judul: 'Peningkatan Skill Komunikasi Bahasa Inggris Bersama Volunteer dari Meksiko',
+      kategori: 'Berita',
+      tanggal: '2026-06-08',
+      gambar: 'images/az.jpeg',
+      ringkasan: 'Muhammadiyah Language Center UNIMUS menyelenggarakan kegiatan peningkatan skill komunikasi bahasa Inggris bersama dua mahasiswa volunteer dari Meksiko, Sebastian Jimenez Ortiz dan Adreck Ramses Morales Alvarez. Kegiatan ini diharapkan dapat meningkatkan kepercayaan diri mahasiswa dalam menggunakan bahasa Inggris secara aktif.',
+      isi: [
+        'Muhammadiyah Language Center UNIMUS / UPT Bahasa Asing UNIMUS menyelenggarakan kegiatan peningkatan skill komunikasi bahasa Inggris bersama dua mahasiswa volunteer dari Meksiko. Kegiatan ini dilaksanakan sebagai salah satu upaya untuk memberikan ruang praktik berbahasa Inggris yang lebih interaktif, komunikatif, dan menyenangkan bagi mahasiswa UNIMUS.',
+        'Dalam kegiatan ini, dua mahasiswa volunteer dari Meksiko, Sebastian Jimenez Ortiz dan Adreck Ramses Morales Alvarez, hadir sebagai tamu internasional yang berbagi pengalaman, budaya, serta praktik komunikasi dalam bahasa Inggris. Melalui suasana pembelajaran yang santai dan partisipatif, mahasiswa diajak untuk lebih berani berbicara, bertanya, berdiskusi, dan mengekspresikan pendapat menggunakan bahasa Inggris.',
+        'Kegiatan ini tidak hanya berfokus pada peningkatan kemampuan bahasa, tetapi juga pada penguatan kepercayaan diri mahasiswa dalam berkomunikasi lintas budaya. Dengan adanya interaksi langsung bersama volunteer internasional, mahasiswa diharapkan mampu mengembangkan keberanian, memperluas wawasan global, serta menjadikan bahasa Inggris sebagai sarana komunikasi yang lebih dekat dengan kehidupan akademik maupun sosial.',
+        'Melalui kegiatan ini, Muhammadiyah Language Center UNIMUS berkomitmen untuk terus menghadirkan program kebahasaan yang mendukung internasionalisasi kampus. Kehadiran volunteer internasional diharapkan dapat memberikan pengalaman belajar yang bermakna dan mendorong mahasiswa untuk semakin aktif menggunakan bahasa Inggris dalam berbagai kesempatan.'
+      ]
+    },
+    {
       id: 'volunteer-luar-negeri',
       judul: 'Talkshow : Cultural Exchange bersama Volunteer Dejavato Foundation',
       kategori: 'Berita',
