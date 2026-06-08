@@ -4405,3 +4405,352 @@ body .hero p {
     color: #475569 !important;
   }
 }
+
+/* ===== Translation Service Page ===== */
+
+.translation-page section {
+  scroll-margin-top: 88px;
+}
+
+.translation-intro {
+  padding: 56px 0 48px;
+}
+
+.translation-intro-text h2 {
+  color: var(--primary);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 8px 0 16px;
+  line-height: var(--leading-tight);
+}
+
+.translation-intro-text p {
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  color: var(--muted);
+  text-align: left;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.service-side-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 91, 170, 0.08);
+  background: var(--white);
+}
+
+.service-side-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.translation-section {
+  padding: 56px 0;
+}
+
+.price-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 91, 170, 0.08);
+}
+
+.price-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: var(--text-md);
+}
+
+.price-table th,
+.price-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e8eef5;
+  vertical-align: top;
+  line-height: var(--leading-body);
+}
+
+.price-table th {
+  background: var(--gradient-brand);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+.price-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.price-table td:first-child {
+  font-weight: 700;
+  color: var(--primary);
+  width: 48px;
+}
+
+.price-table td:nth-child(3),
+.price-table td:nth-child(4),
+.price-table td:nth-child(5) {
+  white-space: nowrap;
+}
+
+.translation-notes {
+  margin-top: 24px;
+}
+
+.translation-notes ul {
+  margin: 10px 0 0 20px;
+  color: #0c4a6e;
+}
+
+.translation-notes li {
+  margin-bottom: 10px;
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+}
+
+.format-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.format-spec-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 91, 170, 0.08);
+  text-align: left;
+}
+
+.format-spec-card strong {
+  display: block;
+  color: var(--primary);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.format-spec-card span {
+  color: var(--dark);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: var(--leading-body);
+}
+
+.format-spec-wide {
+  grid-column: 1 / -1;
+}
+
+.translation-format-note {
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: rgba(0, 166, 166, 0.08);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--secondary);
+  color: var(--dark);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  text-align: left;
+}
+
+.step-cards-6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.step-cards-6 .step-card p {
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  text-align: center;
+}
+
+.step-cards-6 .step-card p a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.procedure-list {
+  list-style: none;
+  counter-reset: procedure;
+  display: grid;
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.procedure-list li {
+  counter-increment: procedure;
+  position: relative;
+  padding: 20px 22px 20px 64px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 91, 170, 0.08);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  color: var(--muted);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.procedure-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 91, 170, 0.1);
+}
+
+.procedure-list li::before {
+  content: counter(procedure);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: grid;
+  place-items: center;
+}
+
+.procedure-list a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.service-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.service-note-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 24px 22px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 91, 170, 0.08);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 91, 170, 0.12);
+}
+
+.service-note-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 91, 170, 0.1), rgba(0, 166, 166, 0.14));
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.service-note-card h3 {
+  color: var(--primary);
+  font-size: var(--text-card-title);
+  margin-bottom: 8px;
+  line-height: var(--leading-tight);
+}
+
+.service-note-card p {
+  color: var(--muted);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  margin: 0;
+  text-align: left;
+}
+
+.translation-cta-section {
+  padding-bottom: 72px;
+}
+
+.cta-box-actions .cta-box-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta-box-actions .cta-box-buttons .btn {
+  min-width: 160px;
+}
+
+@media (max-width: 900px) {
+  .format-spec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-cards-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .translation-intro .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .service-side-image {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .format-spec-grid,
+  .step-cards-6,
+  .service-notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .format-spec-wide {
+    grid-column: auto;
+  }
+
+  .cta-box-actions .cta-box-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-box-actions .cta-box-buttons .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .procedure-list li {
+    padding: 18px 16px 18px 58px;
+  }
+
+  .procedure-list li::before {
+    left: 16px;
+    top: 18px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+}
